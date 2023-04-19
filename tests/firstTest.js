@@ -1,5 +1,6 @@
 const { Builder, By, Key } = require('selenium-webdriver');
 const assert = require('assert');
+const should = require('chai').should();
 
 async function example() {
   // launch the browser
@@ -21,7 +22,11 @@ async function example() {
       return val;
     });
 
-  assert.strictEqual(todoText, 'Learn Selenium]');
+  // assert using node assertion
+  assert.strictEqual(todoText, 'Learn Selenium');
+
+  // assert using chai should
+  todoText.should.equal('Learn Seleniu]m');
 
   console.log(todoText);
 }
