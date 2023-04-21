@@ -1,8 +1,8 @@
 const { Builder, By, Key } = require('selenium-webdriver');
 // const assert = require('assert');
-// const should = require('chai').should();
+const should = require('chai').should();
 
-desecribe('add todo tests', () => {
+describe('add todo tests', () => {
   it('successfully adds a todo item to application', async () => {
     // launch the browser
     const driver = await new Builder().forBrowser('chrome').build();
@@ -27,6 +27,6 @@ desecribe('add todo tests', () => {
     // assert.strictEqual(todoText, 'Learn Selenium');
 
     // assert using chai should
-    // todoText.should.equal('Learn Selenium');
+    todoText.should.equal('Learn Selenium');
   });
 });
